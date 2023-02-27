@@ -13,25 +13,25 @@ RSpec.describe Visitor do
       expect(visitor3).to be_a Visitor
     end
 
-    xit 'visitor has a name' do
+    it 'visitor has a name' do
       expect(visitor1.name).to eq("Bruce")
       expect(visitor2.name).to eq("Tucker")
       expect(visitor3.name).to eq("Penny")
     end
 
-    xit 'visitor has a height attribute' do
+    it 'visitor has a height attribute' do
       expect(visitor1.height).to eq(54)
       expect(visitor2.height).to eq(36)
       expect(visitor3.height).to eq(64)
     end
 
-    xit 'visitor has spending money' do
+    it 'visitor has spending money' do
       expect(visitor1.spending_money).to eq(10)
       expect(visitor2.spending_money).to eq(5)
       expect(visitor3.spending_money).to eq(15)
     end
 
-    xit 'visitor has an empty array of preferences' do
+    it 'visitor has an empty array of preferences' do
       expect(visitor1.preferences).to eq([])
       expect(visitor2.preferences).to eq([])
       expect(visitor3.preferences).to eq([])
@@ -39,7 +39,7 @@ RSpec.describe Visitor do
   end
 
   describe "#visitor preferences are dynamic do" do
-    xit 'visitor preferences can be added to the array' do
+    it 'visitor preferences can be added to the array' do
       visitor1.add_preference(:gentle)
       visitor1.add_preference(:water)
 
@@ -48,7 +48,7 @@ RSpec.describe Visitor do
   end
 
   describe "#visitors have their hight checked" do
-    xit 'visitors arent tall enough by default' do
+    it 'visitors arent tall enough by default' do
       expect(visitor1.tall_enough?(54)).to be true
       expect(visitor2.tall_enough?(54)).to be false
       expect(visitor3.tall_enough?(54)).to be true
